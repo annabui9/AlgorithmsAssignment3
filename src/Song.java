@@ -1,15 +1,19 @@
 public class Song {
 
+    //required member data attributes
     String title;
     String artist;
     double length;
 
 
+    // constructor
     public Song(String title, String artist, double length){
         this.title = title;
         this.artist = artist;
         this.length = length;
     }
+
+    // getters
 
     public String getTitle() {
         return title;
@@ -22,6 +26,8 @@ public class Song {
     public double getLength() {
         return length;
     }
+
+    // setters
 
     public void setTitle(String title) {
         this.title = title;
