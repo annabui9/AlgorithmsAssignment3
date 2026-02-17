@@ -2,11 +2,11 @@ public class DLNode {
 
     DLNode previous;
     DLNode next;
-    String data;
+    Song song;
 
     public DLNode(Song song){
         this.previous = null;
         this.next = null;
-        this.data = "Title: " + song.title + ", Artist: " + song.artist + ", Length: " + song.length;
+        this.song = song;
     }
 }

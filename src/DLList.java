@@ -66,12 +66,13 @@ public class DLList {
 
     }
 
+    @Override
     public String toString(){
         String allNodes = "";
         DLNode current = head; // start at head
 
         while(current != null){
-            allNodes = allNodes + current.data + "\n"; //print
+            allNodes = allNodes + current.song.toString() + "\n"; //print
             current = current.next; // next node
         }
 

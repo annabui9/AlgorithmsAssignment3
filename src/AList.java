@@ -52,7 +52,7 @@ public class AList {
         String allElements = "";
 
         for(int i = 0; i < size; i++){
-            String song = "Title: " + aList[i].getTitle() + ", Artist: " + aList[i].getArtist() + ", Length: " + aList[i].getLength();
+            String song = "Title: " + aList[i].title + ", Artist: " + aList[i].artist + ", Length: " + aList[i].length;
 
             allElements = allElements + song + "\n";
 

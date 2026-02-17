@@ -13,35 +13,9 @@ public class Song {
         this.length = length;
     }
 
+    //to String
     public String toString(){
         return "Title: " + title + ", Artist: " + artist + ", Length: " + length;
     }
 
-    // getters
-
-    public String getTitle() {
-        return title;
-    }
-
-    public String getArtist() {
-        return artist;
-    }
-
-    public double getLength() {
-        return length;
-    }
-
-    // setters
-
-    public void setTitle(String title) {
-        this.title = title;
-    }
-
-    public void setArtist(String artist) {
-        this.artist = artist;
-    }
-
-    public void setLength(double length) {
-        this.length = length;
-    }
 }
