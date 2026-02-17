@@ -38,12 +38,13 @@ public class AList {
     // remove item at position (pos), reshuffles if needed, updates size
     public void removy(int pos){
 
-        if(pos >= 0 && pos < size){
-            for(int i = pos; i < size - 1; i++){
-                aList[i] = aList[i + 1];
+
+        if(pos >= 0 && pos < size){ // if pos is in array
+            for(int i = pos; i < size - 1; i++){ // start at pos (and go until elements after)
+                aList[i] = aList[i + 1]; //replace pos and shift everything
             }
         }
-        aList[size - 1] = null;
+        aList[size - 1] = null; // new empty space
         --size;
     }
 
@@ -53,9 +54,7 @@ public class AList {
 
         for(int i = 0; i < size; i++){
             String song = "Title: " + aList[i].title + ", Artist: " + aList[i].artist + ", Length: " + aList[i].length;
-
             allElements = allElements + song + "\n";
-
         }
         return allElements;
     }

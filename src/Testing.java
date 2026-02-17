@@ -166,19 +166,11 @@ public class Testing {
         System.out.println(genStrSLList.toString());
         System.out.println("DOUBLY LINKED LIST (String)");
         System.out.println(genStrDLList.toString());
-
-
-
-
-
     }
-
 
     public static void  main(String args[]){
         testingNotGeneric();
         testingGenerics();
     }
-
-
 
 }

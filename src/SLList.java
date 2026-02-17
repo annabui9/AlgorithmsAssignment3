@@ -14,7 +14,7 @@ public class SLList {
             head = newNode;
             tail = newNode;
         }else{
-            tail.next = newNode; // update pointer
+            tail.next = newNode; // old tail points to newNode
             tail = newNode; // update Tail
         }
     }
@@ -28,7 +28,7 @@ public class SLList {
 
         // remove head
         if(pos ==0){
-            head = head.next;
+            head = head.next; // head is now the next element
 
             // if list is now empty
             if(head == null){
@@ -42,7 +42,7 @@ public class SLList {
         SLNode current = head; // start at head
 
         for(int i = 0; i < pos - 1 && current.next != null; i++) {
-            current = current.next; // (because we know not removing head, go to next
+            current = current.next; // (because we know not removing head, go to next), will iterate until index before pos
         }
 
         if(current.next == null){ //if nothing to be removed
@@ -53,8 +53,7 @@ public class SLList {
             tail = current;
         }
 
-
-        current.next = current.next.next; // remove node by pointing to node after target
+        current.next = current.next.next; // remove node by pointing to node after pos
 
     }
 
