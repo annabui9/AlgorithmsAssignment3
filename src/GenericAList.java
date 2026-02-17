@@ -31,18 +31,20 @@ public class GenericAList<T> {
         aList[size] = object;
         size++;
 
-
     }
 
     // remove item at position (pos), reshuffles if needed, updates size
     public void removy(int pos){
 
-        if(pos >= 0 && pos < size){
-            for(int i = pos; i < size - 1; i++){
-                aList[i] = aList[i + 1];
-            }
+        if(size == 0 || pos < 0 || pos >= size){ // is pos is invalid or array is empty
+            return;
         }
-        aList[size - 1] = null;
+
+        for(int i = pos; i < size - 1; i++){ // start at pos (and go until elements after)
+            aList[i] = aList[i + 1]; //replace pos and shift everything
+        }
+
+        aList[size - 1] = null; // new empty space
         --size;
     }
 

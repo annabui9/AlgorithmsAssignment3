@@ -38,12 +38,15 @@ public class AList {
     // remove item at position (pos), reshuffles if needed, updates size
     public void removy(int pos){
 
-
-        if(pos >= 0 && pos < size){ // if pos is in array
-            for(int i = pos; i < size - 1; i++){ // start at pos (and go until elements after)
-                aList[i] = aList[i + 1]; //replace pos and shift everything
-            }
+        if(size == 0 || pos < 0 || pos >= size){ // is pos is invalid or array is empty
+            return;
         }
+
+
+        for(int i = pos; i < size - 1; i++){ // start at pos (and go until elements after)
+            aList[i] = aList[i + 1]; //replace pos and shift everything
+        }
+
         aList[size - 1] = null; // new empty space
         --size;
     }
